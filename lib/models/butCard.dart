@@ -5,16 +5,16 @@ class MnuButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 90,
       width: 90,
       child: Container(
+        color: const Color.fromARGB(131, 0, 150, 135),
         child: Image.asset(
           "images/laptop.png",
           height: 20.0,
           width: 20.0,
         ),
-        color: Color.fromARGB(131, 0, 150, 135),
       ),
     );
   }
@@ -28,7 +28,7 @@ class Laptop extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
-        color: Color.fromARGB(53, 0, 150, 135),
+        color: const Color.fromARGB(53, 0, 150, 135),
       ),
       child: OutlinedButton(
           style: OutlinedButton.styleFrom(side: BorderSide.none),
@@ -43,7 +43,7 @@ class Laptop extends StatelessWidget {
               const SizedBox(
                 height: 2,
               ),
-              Text("laptop")
+              const Text("laptop", style: TextStyle(color: Colors.black))
             ],
           )),
     );
@@ -58,7 +58,7 @@ class Print extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
-        color: Color.fromARGB(53, 0, 150, 135),
+        color: const Color.fromARGB(53, 0, 150, 135),
       ),
       child: OutlinedButton(
           style: OutlinedButton.styleFrom(side: BorderSide.none),
@@ -73,7 +73,10 @@ class Print extends StatelessWidget {
               const SizedBox(
                 height: 2,
               ),
-              Text("print")
+              const Text(
+                "print",
+                style: TextStyle(color: Colors.black),
+              )
             ],
           )),
     );
@@ -88,7 +91,7 @@ class MonitorScreen extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
-        color: Color.fromARGB(53, 0, 150, 135),
+        color: const Color.fromARGB(53, 0, 150, 135),
       ),
       child: OutlinedButton(
           style: OutlinedButton.styleFrom(side: BorderSide.none),
@@ -103,7 +106,7 @@ class MonitorScreen extends StatelessWidget {
               const SizedBox(
                 height: 2,
               ),
-              Text("Screen")
+              const Text("Screen", style: TextStyle(color: Colors.black))
             ],
           )),
     );
@@ -118,7 +121,7 @@ class Router extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
-        color: Color.fromARGB(53, 0, 150, 135),
+        color: const Color.fromARGB(53, 0, 150, 135),
       ),
       child: OutlinedButton(
           style: OutlinedButton.styleFrom(side: BorderSide.none),
@@ -133,7 +136,7 @@ class Router extends StatelessWidget {
               const SizedBox(
                 height: 2,
               ),
-              Text("router")
+              const Text("router", style: TextStyle(color: Colors.black))
             ],
           )),
     );
@@ -148,7 +151,7 @@ class WebCam extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
-        color: Color.fromARGB(53, 0, 150, 135),
+        color: const Color.fromARGB(53, 0, 150, 135),
       ),
       child: OutlinedButton(
           style: OutlinedButton.styleFrom(side: BorderSide.none),
@@ -163,7 +166,7 @@ class WebCam extends StatelessWidget {
               const SizedBox(
                 height: 2,
               ),
-              Text("webcam")
+              const Text("webcam", style: TextStyle(color: Colors.black))
             ],
           )),
     );
@@ -171,7 +174,7 @@ class WebCam extends StatelessWidget {
 }
 
 class List extends StatefulWidget {
-  List({Key? key}) : super(key: key);
+  const List({Key? key}) : super(key: key);
 
   @override
   State<List> createState() => _ListState();
@@ -180,40 +183,38 @@ class List extends StatefulWidget {
 class _ListState extends State<List> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Container(
-        height: 77,
-        child: Expanded(
-          child: ListView(
-            scrollDirection: Axis.horizontal,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(5, 0, 5, 0),
-                    child: Print(),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(5, 0, 5, 0),
-                    child: Laptop(),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(5, 0, 5, 0),
-                    child: MonitorScreen(),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(5, 0, 5, 0),
-                    child: Router(),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(5, 0, 5, 0),
-                    child: WebCam(),
-                  ),
-                ],
-              )
-            ],
-          ),
+    return SizedBox(
+      height: 77,
+      child: Expanded(
+        child: ListView(
+          scrollDirection: Axis.horizontal,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: const [
+                Padding(
+                  padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
+                  child: Print(),
+                ),
+                Padding(
+                  padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
+                  child: Laptop(),
+                ),
+                Padding(
+                  padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
+                  child: MonitorScreen(),
+                ),
+                Padding(
+                  padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
+                  child: Router(),
+                ),
+                Padding(
+                  padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
+                  child: WebCam(),
+                ),
+              ],
+            )
+          ],
         ),
       ),
     );

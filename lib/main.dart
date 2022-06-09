@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:programmer/butCard.dart';
-import 'package:programmer/drawerScreen.dart';
-import 'package:programmer/homeScreen.dart';
+import 'package:programmer/home/drawerScreen.dart';
+import 'package:programmer/home/homeScreen.dart';
+import 'package:programmer/screen/screenCardProduct.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,6 +30,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.teal[100],
       drawer: DrawerScreen(),
       body: Stack(children: [
         HomeScreen(),
