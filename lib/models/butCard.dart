@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:programmer/screen/screenCardProduct.dart';
 
 class MnuButton extends StatelessWidget {
   const MnuButton({Key? key}) : super(key: key);
@@ -125,7 +126,11 @@ class Router extends StatelessWidget {
       ),
       child: OutlinedButton(
           style: OutlinedButton.styleFrom(side: BorderSide.none),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) {
+              return const InfoMnueRouter();
+            }));
+          },
           child: Column(
             children: [
               Image.asset(

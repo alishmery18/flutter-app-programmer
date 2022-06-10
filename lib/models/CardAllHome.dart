@@ -1,5 +1,6 @@
 // ignore: file_names
 import 'package:flutter/material.dart';
+import 'package:programmer/screen/screenCardProduct.dart';
 
 class CardHomeMoreRequst extends StatelessWidget {
   const CardHomeMoreRequst({Key? key}) : super(key: key);
@@ -306,7 +307,11 @@ class CardHomeNewProductTow extends StatelessWidget {
       ),
       child: OutlinedButton(
           style: OutlinedButton.styleFrom(side: BorderSide.none),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) {
+              return InfoProductTendaAc6();
+            }));
+          },
           child: Column(
             children: [
               Container(
