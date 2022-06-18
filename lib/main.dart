@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:programmer/home/drawerScreen.dart';
 import 'package:programmer/home/homeScreen.dart';
-import 'package:programmer/screen/screenCardProduct.dart';
+import 'package:programmer/screen/splashscreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.teal,
       ),
-      home: InfoMnueRouter(),
+      home: const SplashScreen(),
     );
   }
 }
@@ -31,10 +30,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.teal[100],
-      drawer: DrawerScreen(),
-      body: Stack(children: [
-        HomeScreen(),
-      ]),
+      body: HomeScreen(),
     );
   }
 }

@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 
 class Appbar extends StatelessWidget {
@@ -5,29 +7,11 @@ class Appbar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: AppBar(
-        actions: [
-          Container(
-            child: Image.asset('images/m.PNG'),
-            padding: EdgeInsets.fromLTRB(0, 5, 8, 0),
-          )
-        ],
-        backgroundColor: Colors.teal,
-        shape: const RoundedRectangleBorder(
-            borderRadius: BorderRadius.only(
-                bottomRight: Radius.circular(35),
-                bottomLeft: Radius.circular(35))),
-        title: Container(
-            child: Text(
-              "المبرمح",
-              style: const TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20),
-            ),
-            alignment: Alignment.center),
-      ),
+    return AppBar(
+      backgroundColor: Colors.teal,
+      shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+              bottomRight: Radius.circular(5), bottomLeft: Radius.circular(5))),
     );
   }
 }

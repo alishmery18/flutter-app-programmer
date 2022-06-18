@@ -1,4 +1,5 @@
-// ignore: file_names
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:programmer/screen/screenCardProduct.dart';
 
@@ -201,31 +202,29 @@ class ListHomeMoreRequst extends StatefulWidget {
 class _ListHomeMoreRequstState extends State<ListHomeMoreRequst> {
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 160,
-      child: Expanded(
-        child: ListView(
-          scrollDirection: Axis.horizontal,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: const [
-                Padding(
-                  padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
-                  child: CardHomeMoreRequst(),
-                ),
-                Padding(
-                  padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
-                  child: CardHomeMoreRequstTow(),
-                ),
-                Padding(
-                  padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
-                  child: CardHomeMoreRequstThree(),
-                ),
-              ],
-            )
-          ],
-        ),
+    return Flexible(
+      child: ListView(
+        shrinkWrap: true,
+        scrollDirection: Axis.horizontal,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: const [
+              Padding(
+                padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
+                child: CardHomeMoreRequst(),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
+                child: CardHomeMoreRequstTow(),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
+                child: CardHomeMoreRequstThree(),
+              ),
+            ],
+          )
+        ],
       ),
     );
   }
@@ -309,7 +308,7 @@ class CardHomeNewProductTow extends StatelessWidget {
           style: OutlinedButton.styleFrom(side: BorderSide.none),
           onPressed: () {
             Navigator.push(context, MaterialPageRoute(builder: (context) {
-              return InfoProductTendaAc6();
+              return const InfoProductTendaAc6();
             }));
           },
           child: Column(
@@ -429,31 +428,29 @@ class ListHomeNewProduct extends StatefulWidget {
 class _ListHomeNewProductState extends State<ListHomeNewProduct> {
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 160,
-      child: Expanded(
-        child: ListView(
-          scrollDirection: Axis.horizontal,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: const [
-                Padding(
-                  padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
-                  child: CardHomeNewProduct(),
-                ),
-                Padding(
-                  padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
-                  child: CardHomeNewProductTow(),
-                ),
-                Padding(
-                  padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
-                  child: CardHomeNewProductThree(),
-                ),
-              ],
-            )
-          ],
-        ),
+    return Flexible(
+      child: ListView(
+        shrinkWrap: true,
+        scrollDirection: Axis.horizontal,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: const [
+              Padding(
+                padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
+                child: CardHomeNewProduct(),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
+                child: CardHomeNewProductTow(),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
+                child: CardHomeNewProductThree(),
+              ),
+            ],
+          )
+        ],
       ),
     );
   }

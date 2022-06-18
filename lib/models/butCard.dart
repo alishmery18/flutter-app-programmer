@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:programmer/screen/screenCardProduct.dart';
 
@@ -27,6 +29,7 @@ class Laptop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 77,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
         color: const Color.fromARGB(53, 0, 150, 135),
@@ -57,6 +60,7 @@ class Print extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 77,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
         color: const Color.fromARGB(53, 0, 150, 135),
@@ -90,6 +94,7 @@ class MonitorScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 77,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
         color: const Color.fromARGB(53, 0, 150, 135),
@@ -120,6 +125,7 @@ class Router extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 77,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
         color: const Color.fromARGB(53, 0, 150, 135),
@@ -154,6 +160,7 @@ class WebCam extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 77,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
         color: const Color.fromARGB(53, 0, 150, 135),
@@ -188,39 +195,37 @@ class List extends StatefulWidget {
 class _ListState extends State<List> {
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 77,
-      child: Expanded(
-        child: ListView(
-          scrollDirection: Axis.horizontal,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: const [
-                Padding(
-                  padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
-                  child: Print(),
-                ),
-                Padding(
-                  padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
-                  child: Laptop(),
-                ),
-                Padding(
-                  padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
-                  child: MonitorScreen(),
-                ),
-                Padding(
-                  padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
-                  child: Router(),
-                ),
-                Padding(
-                  padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
-                  child: WebCam(),
-                ),
-              ],
-            )
-          ],
-        ),
+    return Flexible(
+      child: ListView(
+        shrinkWrap: true,
+        scrollDirection: Axis.horizontal,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: const [
+              Padding(
+                padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
+                child: Print(),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
+                child: Laptop(),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
+                child: MonitorScreen(),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
+                child: Router(),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
+                child: WebCam(),
+              ),
+            ],
+          )
+        ],
       ),
     );
   }
